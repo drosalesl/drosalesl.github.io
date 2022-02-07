@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,700&family=Proza+Libre&display=swap");
+
+$font7: "Nunito Sans", sans-serif;
+$font8: "Proza Libre", sans-serif;
+
+$color-Theme-1: #006199;
+$color-Theme-2: #8cc63f;
+$color-Theme-3: #ffffff;
+$color-Theme-4: #000000;
+$color-Theme-5: #999870;
+
+$color-fondo-nav: linear-gradient(to LEFT, $color-Theme-2, $color-Theme-3);
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  /* background-image: url(logo/ffflurry.svg);
+  background-position: center;
+  background-size: cover; */
+  background-image: radial-gradient(
+    circle,
+    #006199,
+    #0081ad,
+    #009e9f,
+    #00b675,
+    #8cc63f
+  );
+}
+.titulo-principal {
+  font-family: $font7;
+  font-weight: bolder;
+  color: #000000;
+}
+.parrafo {
+  font-family: $font8;
+  color: #000000;
+}
+
+/* Barra de Navegacion */
+.global-nav {
+  display: flex;
+  justify-content: center;
+
+  .navbar {
+    font-family: $font7;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bolder;
+    width: 100%;
+    max-width: 90%;
+
+    .navbar-brand {
+      .logo {
+        width: 200px;
+        height: auto;
+        padding: 20px;
+      }
+    }
+    .nav-item {
+      margin: 0 15px;
+
+      .nav-link {
+        text-align: center;
+        color: $color-Theme-3;
+      }
+    }
+  }
+}
+
+/* Fin de la barra de Navegacion */
+/* Cuerpo de la Pagina */
+
+.card {
+  background-image: url();
+  object-fit: cover;
+}
+.grid-card-serv {
+  gap: 5px;
+}
+.foto-profesionales {
+  object-fit: cover;
+}
+
+/* fin de Cuerpo de la Pagina */
+/* Contenido del carrusel */
+.img-carrusel {
+  width: 100%;
+  object-fit: cover;
+}
+/* fin del Contenido del carrusel */
+/* Contenido del footer */
+.fab,
+.fas,
+.negro {
+  color: #000000;
+}
+/* fin del Contenido del footer */
+
+.cta {
+  border: none;
+  background: none;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 10px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1.5px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.card {
+  background: rgb(255, 255, 255);
+  border-radius: 0.6em;
+  box-shadow: 0.3em 0.3em 0.7em #00000015;
+  transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: rgb(250, 250, 250) 0.2em solid;
+}
+
+.card:hover {
+  border: $color-Theme-2 0.3em solid;
+}
